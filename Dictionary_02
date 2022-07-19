@@ -1,0 +1,35 @@
+1. Qual foi o item mais vendido nas categorias 'livros' e 'lazer'?
+2. Quanto foi vendido de 'notebook asus' e de 'ipad'?
+
+mais_vendidos = {'tecnologia': 'iphone', 'refrigeracao': 'ar consul 12000 btu', 'livros': 'o alquimista', 'eletrodoméstico': 'geladeira', 'lazer': 'prancha surf'}
+vendas_tecnologia = {'iphone': 15000, 'samsung galaxy': 12000, 'tv samsung': 10000, 'ps5': 14300, 'tablet': 1720, 'ipad': 1000, 'tv philco': 2500, 'notebook hp': 1000, 'notebook dell': 17000, 'notebook asus': 2450}
+
+#Solucao Ex 1
+livro = mais_vendidos['livros']
+lazer = mais_vendidos['lazer']
+
+print('O livro mais vendido foir o: {}'.format(livro))
+print('O item de lazer mais vendido foi o: {}'.format(lazer))
+print('')
+
+#Solucao Ex 2
+notebook_asus = vendas_tecnologia['notebook asus']
+ipad = vendas_tecnologia['ipad']
+print(f'Quantidade vendida de notebook asus: {notebook_asus}') #primeira forma de chamar a variavel
+print('Quantidade vendida de ipad: {}'.format(ipad))           #segunda forma de chamar a variavel
+print('')
+
+#Solucao Ex 2 com .get(chave)
+#Quando trabalho com dicionario, essa é a forma mais adequada
+print('Quantidade vendida de Notebook Asus, foi de: {}'.format(vendas_tecnologia.get('notebook asus')))
+print('Quantidade vendida de iPad, foi de: {}'.format(vendas_tecnologia.get('ipad')))
+
+output: 
+O livro mais vendido foir o: o alquimista
+O item de lazer mais vendido foi o: prancha surf
+
+Quantidade vendida de notebook asus: 2450
+Quantidade vendida de ipad: 1000
+
+Quantidade vendida de Notebook Asus, foi de: 2450
+Quantidade vendida de iPad, foi de: 1000
