@@ -23,3 +23,19 @@ Novo_valor = f"{New} new messages"
 print(Novo_valor)
 <br>
 Output: 5 new messages
+
+<br>
+<h4>
+3. if and else
+</h4>
+is_charged = False
+<br>
+if is_charged:
+<br>
+    print('charged')
+    <br>
+else:
+<br>
+    print('low battery')
+    <br>
+    output: low battery
