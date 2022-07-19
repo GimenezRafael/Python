@@ -1,5 +1,5 @@
 # Python
-Learning
+Step by step
 
 <h4>
   1. Checking if the number is different of zero
