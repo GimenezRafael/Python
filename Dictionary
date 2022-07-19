@@ -15,3 +15,5 @@ vendas_tecnologia = {'iphone': 15000, 'samsung galaxy': 12000, 'tv samsung': 100
 qtde_iphone = vendas_tecnologia['iphone']
 
 print(qtde_iphone)
+
+output: 15000
