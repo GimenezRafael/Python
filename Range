@@ -1,0 +1,51 @@
+Case 1
+Uso mais comum no for:
+produtos = ['arroz', 'feijao', 'macarrao', 'atum', 'azeite']
+estoque = [50, 100, 20, 5, 80]
+
+for i in range(5):
+    print('Para o produto: {}, temos: {} unidades em estoque'.format(produtos[i], estoque[i]))
+    
+----------------------------------------------------------------------------------------------------
+
+Case 2
+Aqui fazemos a contagem de 1 a 9, pois o Python comeca no primeiro e exclui o ultimo numero
+for i in range(1,10):
+    print(i)
+    
+----------------------------------------------------------------------------------------------------
+
+Case 3
+# Exemplo: Modelo Jack Welch da G&E
+#    1. Classe A: 10% melhor
+#    2. Classe B: 80% mantém/busca melhorar
+#    3. Classe C: 10% pior
+    
+# Quem são os funcionários classe B?
+
+funcionarios = ['Maria', 'José', 'Antônio', 'João', 'Francisco', 'Ana', 'Luiz', 'Paulo', 'Carlos', 'Manoel', 'Pedro', 'Francisca', 'Marcos', 'Raimundo', 'Sebastião', 'Antônia', 'Marcelo', 'Jorge', 'Márcia', 'Geraldo']
+vendas = [2750, 1900, 1500, 1200, 1111, 1100, 999, 900, 880, 870, 800, 800, 450, 400, 300, 300, 120, 90, 80, 70]
+
+print('Funcionarios Classe B:')
+for i in range(2,18):
+    print('{} vendeu: {}'.format(funcionarios[i], vendas[i]))
+    
+    
+### nessa etapa, estou colocando em ordem decrescente, caso a lista nao estivem ja em ordem
+funcionarios = ['Maria', 'José', 'Antônio', 'João', 'Francisco', 'Ana', 'Luiz', 'Paulo', 'Carlos', 'Manoel', 'Pedro', 'Francisca', 'Marcos', 'Raimundo', 'Sebastião', 'Antônia', 'Marcelo', 'Jorge', 'Márcia', 'Geraldo']
+vendas = [2750, 1900, 1200, 1500, 1111, 1100, 900, 880, 870,999, 800, 800, 450, 400, 300, 300, 120, 90, 80, 70]
+vendas.sort(reverse=True)
+
+print('Funcionarios Classe B:')
+for i in range(2,18):
+    print('{} vendeu: {}'.format(funcionarios[i], vendas[i]))
+    
+---------------------------------------------------------------------------------------------------- 
+ 
+Case 4    
+#range com passo
+#contando de 25 em 25, de 0 a 100
+print(range(0, 100, 25))
+
+for i in range(0, 100, 25):
+    print(i)    
