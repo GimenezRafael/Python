@@ -1,0 +1,33 @@
+Step by step
+
+  1. Checking if the number is different of zero
+  
+number_choice = 3
+non_zero = number_choice != 0
+
+print(non_zero)
+
+Output: True
+
+-------------------------------------------------------
+
+2. We can call the variable using f string
+
+New = 5
+Novo_valor = f"{New} new messages"
+
+print(Novo_valor)
+
+Output: 5 new messages
+
+-------------------------------------------------------
+
+3. if and else
+
+is_charged = False
+if is_charged:
+    print('charged')
+else:
+    print('low battery')
+
+    output: low battery
