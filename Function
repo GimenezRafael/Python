@@ -1,0 +1,38 @@
+#Function
+
+Case 1
+Estou criando uma lista de cadastro de produtos atraves do input e disponibilizando para o usuario 3 insercoes, atraves do range(3)
+
+def cadastrar_produto():
+    produto = input('Digite o nome do produto que deseja cadastrar')
+    produto = produto.casefold()  # .casefold usamos para deixar todos as letras minusculas
+    produto = produto.strip()     # .strip usamos para deletar os espacoes antes e depois da palavra que o usuario inseriu
+    print('Produto {} cadastrado com sucesso'.format(produto))
+
+for i in range(3):
+    cadastrar_produto()
+    
+----------------------------------------------------
+
+Diferenca entre VARIAVEL e FUNCAO
+Quando escrevemos apenas assim, estamos chamando uma variavel
+cadastrar_produto
+
+Porem quando escrevemos assim, estamos chamando uma funcao
+cadastrar_produto()
+
+----------------------------------------------------
+
+Case 2
+Continuacao do Case 1, porem aqui ele vai inserir apenas um produto.
+E principalmente fazendo o return para chamar a variavel produto.
+Depois atribuindo a funcao cadastrar_produto à varialvel produto e por fim mandando imprimir.
+
+def cadastrar_produto():
+    produto = input('Digite o nome do produto que deseja cadastrar')
+    produto = produto.casefold()
+    produto = produto.strip()
+    return produto
+
+produto = cadastrar_produto()
+print(produto)
