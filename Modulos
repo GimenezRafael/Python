@@ -1,0 +1,15 @@
+Importando MODULOS
+
+Estrutura
+import modulo
+
+ou 
+
+import modulo as novo_nome
+
+--------------------------------
+
+#Estou abrindo o meu perfil no Github
+import webbrowser as wb
+
+wb.open('https://github.com/GimenezRafael')
