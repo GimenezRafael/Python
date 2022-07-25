@@ -1,0 +1,23 @@
+# Case 2: Types Netflix
+
+import pandas as pd
+
+tabela = pd.read_csv('07. Pandas.csv')
+display(tabela)
+
+tabela = tabela.dropna()
+tabela = tabela.drop('As of', axis=1)
+display(tabela.info)
+display(tabela.describe().round(1))
+
+qtde_type = tabela['Type'].value_counts()
+display(qtde_type)
+
+qtde_type_perc = tabela['Type'].value_counts(normalize=True)
+display(qtde_type_perc)
+
+import plotly.express as px
+
+for collumn in tabela:
+    graficos = px.histogram(tabela, x=collumn, color='Type')
+    graficos.show()
