@@ -1,0 +1,53 @@
+This is a Case of credit card cancellation analysis
+
+Steps for programming logic:
+1: import database
+2: view and transform the database
+3: analyse the database
+4: construction the analyse to understand the reasons
+# 1. import database
+import pandas as pd
+
+tabela = pd.read_csv("ClientesBanco.csv", encoding="latin1")
+
+# 2. view and transform the database
+#deleting a collumn
+# axis=0 --> will delete a row
+# axis=1 --> will delete a collumn
+tabela = tabela.drop('CLIENTNUM', axis=1)
+
+display(tabela)
+# 2: view and transform the database and 3: analyse the database
+
+#deleting all rows wtih some null value
+tabela = tabela.dropna()
+
+#able do view the compact info about our DataFrame
+display(tabela.info())
+#to view a descripition for each collumn
+#.roud(1) we used to round the numbers
+display(tabela.describe().round(1))
+# 4. construction the analyse to understand the reasons
+#Let's analyse how is the relation beteween clients x cancel clients
+qtde_categoria = tabela['Categoria'].value_counts()
+display(qtde_categoria)
+
+qtde_categoria_perc = tabela['Categoria'].value_counts(normalize=True)
+display(qtde_categoria_perc)
+# 4: construction the analyse to understand the reasons
+# let's try to understand why customers are canceling, using the pareto rule
+
+#importing a library to construction some graphics
+import plotly.express as px
+
+#possible to view a histogram graphic
+#the y axis he's already ready that are the quatities.
+grafico = px.histogram(tabela, x='Idade', color='Categoria')
+grafico.show()
+#now we'll make a graphic for each collun
+
+# when we make FOR inside the python it scrolls through the columns and not the rows.
+# to scroll through the lines would have to use .index
+for collumn in tabela:
+    grafico = px.histogram(tabela, x=collumn, color='Categoria')
+    grafico.show()
