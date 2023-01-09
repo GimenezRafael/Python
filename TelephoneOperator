@@ -11,4 +11,4 @@ value = 50
 if minutes > 100:
 	value = value + (minutes - 100) * 2.0
 
-print(f"Amount payable {value:}")
+print(f"Amount payable {value:.2f}")
