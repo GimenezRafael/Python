@@ -1,0 +1,21 @@
+""" Make a program to read the amount of glucose in a person's blood and then show on the screen the classification of this glucose according to the reference 
+table
+Glucose Classification
+Normal: Up to 100 mg/dl
+Elevated: Greater than 100 to 140 mg/dl
+Diabetes: Greater than 140 mg/dl """
+
+glucose: float
+
+glucose = float(input("Write your glycemic index: "))
+
+print("Classificacao: ", end="")
+
+if glucose <= 100:
+    print("Normal")
+
+elif glucose <= 140:
+    print("High")
+    
+else:
+    print("Diabetes")
