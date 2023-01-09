@@ -1,0 +1,14 @@
+// A telephone operator charges 50 for a basic plan that entitles you to 100 minutes of telephone. Each minute that exceeds the 100-minute allowance costs 2.
+// Make a program for read the amount of minutes that a person has consumed, hence showing the amount to be paid.
+
+minutos: int
+value: float
+
+minutes = int(input("Enter the number of minutes: "))
+
+value = 50
+
+if minutes > 100:
+	value = value + (minutes - 100) * 2.0
+
+print(f"Amount payable {value:}")
