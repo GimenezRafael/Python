@@ -1,8 +1,8 @@
-// 02 Write a program to calculate the change in the payment process for a product in a grocery store
+// 02 Write a program to calculate the change in the payment process for a product in a grocery store.
 The program must read the unit price of the product, the quantity of units purchased for this product,
 and the cash value given by the customer. Your program should show the amount of change to be returned
 to the client. If the money given by the customer is not enough, show a message informing the
-remaining amount as per example.
+remaining amount.
 
 price: float; amount_received: float; account_change: float; missing: float;
 quantity: int
