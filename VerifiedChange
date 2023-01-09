@@ -1,0 +1,19 @@
+// 02 Write a program to calculate the change in the payment process for a product in a grocery store
+The program must read the unit price of the product, the quantity of units purchased for this product,
+and the cash value given by the customer. Your program should show the amount of change to be returned
+to the client. If the money given by the customer is not enough, show a message informing the
+remaining amount as per example.
+
+price: float; amount_received: float; account_change: float; missing: float;
+quantity: int
+
+price = float(input("Enter the unit price: "))
+quantity = int(input("Enter the quantity: "))
+amount_received = float(input("Enter the amout received: "))
+
+if price * quantity > amount_received:
+    missing = price * quantity - amount_received
+    print(f"The payment isn't enough, you need to pay: {missing:}")
+else:
+    account_change = amount_received - price * quantity
+    print(f"Change = {account_change:.2f}")
