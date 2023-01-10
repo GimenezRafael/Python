@@ -1,0 +1,37 @@
+"""
+A restaurant has several products. Each product has a code and a price.
+You must make a program to read the code and purchased quantity of a product
+(assuming a valid code), and inform the amount to be paid, with two decimal places, as product table on the side.
+
+1 $5.00
+2 $3.50
+3 $4.80
+4 $8.90
+5 $7.32
+"""
+
+code: int; qtd: int
+amount_to_pay: float;
+
+code = int(input("Product code purschased: "))
+qtd = int(input("Quantity: "))
+
+price1 = 5.00
+price2 = 3.50
+price3 = 4.80
+price4 = 8.90
+price5 = 7.32
+
+amount_to_pay = 0
+if code == 1:
+	amount_to_pay = qtd * price1
+elif code == 2:
+	amount_to_pay = qtd * price2
+elif code == 3:
+	amount_to_pay = qtd * price3
+elif code == 4:
+	amount_to_pay = qtd * price4
+elif code == 5:
+	amount_to_pay = qtd * price5
+
+print(f"Amount to pay: $ {amount_to_pay:.2f}")
