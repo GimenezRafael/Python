@@ -1,0 +1,16 @@
+"""
+Write a program to read two integers and tell if one number is a multiple of the other. You
+numbers can be entered in any order.
+"""
+
+number1: int; number2: int
+
+print("Write 2 integers numbers")
+number1 = int(input())
+number2 = int(input())
+
+if number1 % number2 == 0 or number2 % number1 == 0:
+  print("Ther're multiples")
+  
+else:
+  print("They aren't")
