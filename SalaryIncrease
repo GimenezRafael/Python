@@ -1,0 +1,32 @@
+""" A company will grant a percentage increase of
+salary to your employees depending on how much
+each person wins, according to the table.
+
+Make a program to read a person's salary, then show
+what is this person's new salary after the raise,
+how much was the increase and what was the percentage of increase.
+
+Current Salary Increase
+Up to $1000.00                   20%
+Between $1000.00 and $3000.00    15%
+Between $3000.00 and $8000.00    10%
+Over $8000.00                     5%
+"""
+
+salary:float; new_salary: float
+
+salary = float(input("Write the salary: "))
+
+if salary <= 1000.00:
+    new_salary = salary * 0.2 + salary
+    
+elif salary <= 3000.00:
+    new_salary = salary * 0.15 + salary
+    
+elif salary <= 8000.00:
+    new_salary = salary * 0.10 + salary
+
+else:
+    new_salary = salary * 0.05 + salary
+    
+print(f"New salary: {new_salary:.2f}. The increase is: {new_salary - salary:.2f}. And in percentage represents: {(new_salary / salary -1) * 100:.2f}%")
