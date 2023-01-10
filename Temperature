@@ -1,0 +1,22 @@
+"""You want to convert a temperature measurement from the Celsius scale to Fahrenheit or vice versa.
+    For this, you must build a program that reads the letter "C" or "F" indicating in which scale it will be temperature is reported. 
+    Then the program should show the temperature on the other scale with two decimal places."""
+
+scale: str
+celsius: float; fahrenheit: float
+
+scale = str(input("What scale are you going to enter the temperature in (C/F)? "))
+
+if scale == "F" or scale == "f":
+    fahrenheit = float(input("Enter the temperature in Fahrenheit: "))
+    
+    celsius = 5.0 / 9.0 * (fahrenheit - 32.0)
+    print(f"Equivalent temperature in Celsius: {celsius:.2f}")
+    
+elif scale == "C" or scale == "c":
+    celsius = float(input("Enter the temperature in Celsius: "))
+    
+    fahrenheit = celsius * 9.0 / 5.0 + 32.0
+    print(f"Equivalent temperature in Fahrenheit: {fahrenheit:.2f}")
+else:
+    print("Write the right letter")
