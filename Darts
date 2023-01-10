@@ -1,0 +1,22 @@
+"""Darts:
+In javelin throwing, the athlete has three chances to throw the javelin as far as possible.
+You must create a program to, given the measurements of the three launch attempts, inform which
+it was the biggest."""
+
+distance_01: float; distance_02: float; distance_03: float; biggest: float
+
+print("Write the 3 distances:")
+distance1 = float(input())
+distance2 = float(input())
+distance3 = float(input())
+
+if distance1 > distance2 and distance3:
+    biggest = distance1
+    
+elif distance2 > distance1 and distance2 > distance3:
+    biggest = distance2
+    
+else:
+    biggest = distance3
+    
+print(f"Biggest = {biggest:.2f}")
