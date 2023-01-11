@@ -1,0 +1,17 @@
+"""
+Read the start time and end time of a game.
+Then calculate the duration of the game, knowing that it can start on one day and end on another,
+with a minimum duration of 1 hour and a maximum of 24 hours.
+"""
+
+start: float; finished: float
+
+start = int(input("The game started at: "))
+finished = int(input("The game finished at: "))
+
+if start < finished:
+    duration = finished - start
+else:
+    duration = 24 - (start - finished)
+    
+print(f"The duration oh the game is: {duration:.2f} hours")
