@@ -1,9 +1,8 @@
 """
-"media_idades"
-Faça um programa para ler um número indeterminado de dados, contendo cada um, a idade de um
-indivíduo. O último dado, que não entrará nos cálculos, contém um valor de idade negativa. Calcular
-e imprimir a idade média deste grupo de indivíduos. Se for entrado um valor negativo na primeira vez,
-mostrar a mensagem "IMPOSSIVEL CALCULAR".
+Write a program to read an indefinite number of data, each containing the age of a
+individual. The last piece of data, which will not be included in the calculations, contains a negative age value. Calculate
+and print the average age of this group of individuals. If you enter a negative value the first time,
+show the message "Write a positive age".
 """
 
 age: int; quantity_of_people: int
