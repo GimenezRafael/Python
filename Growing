@@ -1,0 +1,19 @@
+"""
+Read an indeterminate number of pairs of integer values X and Y. Write for each X and Y a
+message indicating whether these values were typed in ascending or descending order. The
+program must terminate when two equal values are entered.
+"""
+
+x: int; y: int
+
+x = int(input("Write a integer number: "))
+y = int(input("Write a integer number: "))
+
+while x != y:
+    if x > y:
+         print("Downing")
+    else:
+        print("Growing")
+    
+    x = int(input("Write the x number: "))
+    y = int(input("Write the y number: "))
