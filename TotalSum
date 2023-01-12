@@ -1,0 +1,14 @@
+"""
+Write a program with the condition WHILE and to end make a sum.
+"""
+
+x: int; total: int
+
+x = int(input("Write the integer number: "))
+total = 0
+
+while x != 0:
+    total = total + x
+    x = int(input("Write other number: "))
+
+print(f"The sum is: {total}")
