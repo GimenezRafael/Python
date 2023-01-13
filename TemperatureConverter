@@ -1,0 +1,10 @@
+tempC:float; tempF:float
+repeate: str
+
+repeate = "yes"
+
+while repeate == "yes":
+    tempC = int(input("Write the temperature in Celscius: "))
+    tempF = (9 * tempC) / 5 + 32
+    print(f"The temperature in F is: {tempF:.2f}")
+    repeate = str(input("Do you want to check another temperature? "))
