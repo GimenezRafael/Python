@@ -1,0 +1,11 @@
+"""
+Read an integer number N, then show on the screen the table of N for 1 to 10
+"""
+
+n: int; product: int
+
+n = int(input("write the number: "))
+
+for i in range (1,11):
+    product = i * n
+    print(f"{n} x {i} = {product}")
