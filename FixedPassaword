@@ -1,0 +1,15 @@
+"""
+Write a program that repeats reading a password until it is valid. For every reading of
+incorrect password entered, write the message "Invalid Password! Try again:". when the password
+is correctly informed, the message "Access Permitted" should be printed and the algorithm
+closed. Assume that the correct password is the value 2002.
+"""
+
+password: int
+
+password = int(input("Write the password: "))
+
+while password != 2002:
+    password = int(input("Invalid Password! Try again: "))
+    
+print("Access Permitted")
