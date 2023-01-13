@@ -1,0 +1,49 @@
+""" experiences"
+Maria has just started her undergraduate course at medical school and needs your help to
+organize the experiments of a laboratory for which she is responsible. She wants to know at the end of the year,
+how many guinea pigs were used in the laboratory and the percentage of each type of guinea pig used. This one
+laboratory in particular uses three types of guinea pigs: frogs, mice and rabbits. to get these
+information, she knows exactly the number of experiments that have been performed, the type of guinea pig
+used and the number of guinea pigs used in each experiment. Write a program that reads a
+integer value N that indicates the various test cases that come next. Each test case contains a
+integer that represents the number of guinea pigs used and a letter ('C', 'F' or 'R'), indicating the type
+guinea pig (R:Rat F:Frog R:Rabbit). Present the total number of guinea pigs used, the total of each type of
+guinea pig used and the percentage of each one in relation to the total number of guinea pigs used, with the
+percentage must be presented with two digits after the point.
+"""
+
+n: int; ratos: int; sapos: int; coelhos: int; qtdcobaias: int; total: int
+tipo: str
+pratos: float; psapos: float; pcoelhos: float
+
+n = int(input("Quantos casos de teste serao digitados? "))
+
+rat = 0
+frog = 0
+rabbit = 0
+
+for i in range(n):
+	qtdcobaias = int(input("Quantidade de cobaias: "))
+	tipo = str(input("Tipo de cobaia: "))
+
+	if tipo == 'R':
+		ratos = rat + qtdcobaias
+	elif tipo == 'F':
+		frog = frog + qtdcobaias
+	else:
+		rabbit = rabbit + qtdcobaias
+
+total = rat + frog + rabbit
+prabbit = (float(rabbit) / total) * 100.0
+prat = (float(rat) / total) * 100.0
+pfrog = (float(frog) / total) * 100.0
+
+print("")
+print("\nFINAL RELATORY: ")
+print(f"Total: {total} cobaias")
+print(f"Total of rabbit: {rabbit}")
+print(f"Total of rat: {rat}")
+print(f"Total of frog: {frog}")
+print(f"Percentual of rabbit: {prabbit:.2f}")
+print(f"Percentual of rat: {prat:.2f}")
+print(f"Percentual of frog: {pfrog:.2f}")
